@@ -1,0 +1,41 @@
+.Posts {
+  width: 100%;
+  max-width: 960px;
+  margin: 0;
+  padding: 0;
+}
+
+.Post {
+  display: flex;
+  list-style: none;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.Post-left {
+  display: flex;
+  align-items: center;
+}
+
+.Post-upvotes {
+  width: 45px;
+}
+
+.Post-right {
+  padding-top: 4px;
+  padding-left: 10px;
+}
+
+.Post-title {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.Post-author {
+  font-size: 14px;
+}
+
+.Post-thumbnail {
+  height: 60px;
+  width: 80px;
+}

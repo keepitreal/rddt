@@ -1,0 +1,14 @@
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  color: white;
+}
+
+.Subreddit-input {
+  font-size: 1rem;
+  background-color: #282c34;
+  color: white;
+}

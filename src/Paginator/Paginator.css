@@ -1,0 +1,35 @@
+.Paginator {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 30px;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.Paginator-button.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.Paginator-button.left {
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-right: 30px solid red;
+  border-bottom: 15px solid transparent;
+  margin-right: 10px;
+}
+
+.Paginator-button.right {
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-left: 30px solid red;
+  border-bottom: 15px solid transparent;
+}
+
+.Paginator-page {
+  margin-right: 10px;
+}

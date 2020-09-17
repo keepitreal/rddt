@@ -1,25 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
+import cx from 'classnames';
+
+import Navigation from './Navigation/Navigation';
+import Posts from './Posts/Posts';
+import Paginator from './Paginator/Paginator';
+import useSubreddit from './useSubredditHook';
+
 import './App.css';
 
 function App() {
+  const {
+    isLoading,
+    onChange,
+    page,
+    posts,
+    setPage,
+    subreddit,
+  } = useSubreddit();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation subreddit={subreddit} onChange={onChange} />
+      <div className='Body'>
+        <LoadingIcon isLoading={isLoading} />
+        <Posts posts={posts} page={page} />
+        <Paginator page={page} setPage={setPage} numPosts={posts.length} />
+      </div>
     </div>
+  );
+}
+
+function LoadingIcon({isLoading}) {
+  const classname = cx('LoadingIcon', {
+    'LoadingIcon-loading': isLoading,
+  });
+  return (
+    <div className={classname}><div></div></div>
   );
 }
 
