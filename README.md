@@ -1,6 +1,9 @@
 # RDDT
 Reddit client built with React
 
+## Live version:
+Visit https://rddt.netlify.app/ to see the app running
+
 To run:
 1. Clone the app
 2. Run `cd rddt` and then `yarn` to install dependencies
